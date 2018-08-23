@@ -1,5 +1,5 @@
 function lquadetrend(Y)
-% Perform the log-quadratic detrending
+% Perform the log-quadratic filtering
 % The aim of this function is to estimate the following regression, where y
 % is the natural log of the series in question:
 %                    y_t = a + bt + ct^2 + e_t
