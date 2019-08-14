@@ -11,7 +11,7 @@ a = ones(T,1);                          % Generating the variables for the econo
 b = [1:T]';                             % equation of log-quadratic detrending
 c = [1:T]'.^2;
 X = [a b c];                            % Putting everybody together
-beta = inv(X'*X)*X'*Y;                  % Good old OLS estimator
+beta = (X'*X)\(X'*Y);                   % Good old OLS estimator
 y_s = X*beta;                           % Fitted value aka trend component
 y_c = Y - y_s;                          % Difference between actual data and trend aka cycle component
                                         % Now begin the amenities
